@@ -1,5 +1,3 @@
-// src/modules/admin/admin.service.ts
-
 import { prisma } from "../../lib/prisma";
 import {
       IUserQuery,

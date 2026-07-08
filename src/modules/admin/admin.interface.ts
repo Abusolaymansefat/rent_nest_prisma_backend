@@ -8,9 +8,6 @@ export interface IUpdateUserStatus {
   activeStatus: UserStatus;
 }
 
-/**
- * User Query
- */
 export interface IUserQuery {
   page?: number;
   limit?: number;
@@ -19,9 +16,7 @@ export interface IUserQuery {
   activeStatus?: UserStatus;
 }
 
-/**
- * Property Query
- */
+
 export interface IPropertyQuery {
   page?: number;
   limit?: number;
@@ -30,18 +25,14 @@ export interface IPropertyQuery {
   availability?: PropertyAvailability;
 }
 
-/**
- * Rental Query
- */
+
 export interface IRentalQuery {
   page?: number;
   limit?: number;
   status?: RentalStatus;
 }
 
-/**
- * Dashboard Statistics (Optional)
- */
+
 export interface IAdminDashboard {
   totalUsers: number;
   totalLandlords: number;

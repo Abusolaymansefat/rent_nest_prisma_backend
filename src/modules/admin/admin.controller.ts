@@ -1,5 +1,3 @@
-// src/modules/admin/admin.controller.ts
-
 import { Request, Response } from "express";
 import httpStatus from "http-status";
 
@@ -7,9 +5,7 @@ import { catchAsync } from "../../utils/catchAsync";
 import { sendResponse } from "../../utils/sendResponse";
 import { AdminService } from "./admin.service";
 
-/**
- * GET /api/admin/users
- */
+// Get all users for admin
 const getAllUsers = catchAsync(async (req: Request, res: Response) => {
       const result = await AdminService.getAllUsers(req.query);
 
