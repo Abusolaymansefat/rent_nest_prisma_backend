@@ -22,9 +22,9 @@ const getAllUsers = catchAsync(async (req: Request, res: Response) => {
       });
 });
 
-/**
- * PATCH /api/admin/users/:id
- */
+
+
+// update user status
 const updateUserStatus = catchAsync(async (req: Request, res: Response) => {
 
       const id = req.params.id as string;
