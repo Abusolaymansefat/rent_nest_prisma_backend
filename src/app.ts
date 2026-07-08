@@ -30,10 +30,18 @@ app.get("/", (req: Request, res: Response) => {
 
 
 // routes 
+
+// auth routes
 app.use("/api/auth", AuthRoutes);
+// property routes
 app.use("/api/properties", PropertyRoutes);
+// category routes
 app.use("/api/categories", CategoryRoutes);
+
+// landlord routes
 app.use("/api/landlord", LandlordRoutes);
+
+// rental routes
 app.use("/api/rentals", RentalRoutes);
 app.use("/api/reviews", ReviewRoutes);
 app.use("/api/admin/users", AdminRoutes);
