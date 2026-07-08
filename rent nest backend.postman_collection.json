@@ -17,7 +17,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"name\": \"Abu Solayman\",\r\n  \"email\": \"landlord@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"LANDLORD\"\r\n}",
+              "raw": "{\r\n  \"name\": \"landlord\",\r\n  \"email\": \"landlord4@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"LANDLORD\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -47,7 +47,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"email\": \"landlord@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
+              "raw": "{\r\n  \"email\": \"landlord4@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -203,7 +203,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"name\": \"Apartment\",\r\n  \"slug\": \"apartment\",\r\n  \"icon\": \"🏢\"\r\n}",
+              "raw": "{\r\n  \"name\": \"Apartment1\",\r\n  \"slug\": \"apartment1\",\r\n  \"icon\": \"🏢2\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -237,7 +237,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"title\": \"Luxury Family Apartment\",\r\n  \"description\": \"A spacious and fully furnished apartment with modern facilities.\",\r\n  \"location\": \"Dhaka\",\r\n  \"address\": \"House 15, Road 7, Dhanmondi\",\r\n  \"price\": 25000,\r\n  \"bedrooms\": 3,\r\n  \"bathrooms\": 2,\r\n  \"size\": 1450,\r\n  \"propertyType\": \"APARTMENT\",\r\n  \"images\": [\r\n    \"https://images.unsplash.com/photo-1560185007-c5ca9d2c014d\",\r\n    \"https://images.unsplash.com/photo-1505693416388-ac5ce068fe85\"\r\n  ],\r\n  \"amenities\": [\r\n    \"WiFi\",\r\n    \"Parking\",\r\n    \"Lift\",\r\n    \"Security\",\r\n    \"Generator\",\r\n    \"Air Conditioning\"\r\n  ],\r\n  \"categoryId\": \"3821c0d2-7443-4194-80aa-053b53de2633\"\r\n}",
+              "raw": "{\r\n  \"title\": \"Luxury Family Apartment\",\r\n  \"description\": \"A spacious and fully furnished apartment with modern facilities.\",\r\n  \"location\": \"Dhaka\",\r\n  \"address\": \"House 14, Road 7, Dhanmondi\",\r\n  \"price\": 25000,\r\n  \"bedrooms\": 3,\r\n  \"bathrooms\": 3,\r\n  \"size\": 1600,\r\n  \"propertyType\": \"APARTMENT\",\r\n  \"images\": [\r\n    \"https://images.unsplash.com/photo-1560185007-c5ca9d2c014d\",\r\n    \"https://images.unsplash.com/photo-1505693416388-ac5ce068fe85\"\r\n  ],\r\n  \"amenities\": [\r\n    \"WiFi\",\r\n    \"Parking\",\r\n    \"Lift\",\r\n    \"Security\",\r\n    \"Generator\",\r\n    \"Air Conditioning\"\r\n  ],\r\n  \"categoryId\": \"3821c0d2-7443-4194-80aa-053b53de2633\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"

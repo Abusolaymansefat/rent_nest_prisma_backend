@@ -25,6 +25,14 @@ const createProperty = catchAsync(async (req: Request, res: Response) => {
             });
       }
 
+      if (!req.body) {
+            return sendResponse(res, {
+                  success: false,
+                  statusCode: httpStatus.BAD_REQUEST,
+                  message: "Request body is required",
+            });
+      }
+
       const payload = {
             ...req.body,
             categoryId: req.body.categoryId || req.body.category || undefined,

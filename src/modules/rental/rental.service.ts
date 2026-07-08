@@ -7,6 +7,10 @@ const createRentalRequest = async (
       tenantId: string,
       payload: ICreateRentalRequest
 ) => {
+      if (!payload.propertyId) {
+            throw new Error("Property ID is required");
+      }
+
       const property = await prisma.property.findUnique({
             where: {
                   id: payload.propertyId,
@@ -17,7 +21,7 @@ const createRentalRequest = async (
       });
 
       if (!property) {
-            throw new Error("Property not found");
+            throw new Error(`Property not found with ID: ${payload.propertyId}`);
       }
 
       if (property.availability !== "AVAILABLE") {

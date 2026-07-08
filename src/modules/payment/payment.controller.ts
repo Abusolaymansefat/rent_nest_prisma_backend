@@ -5,6 +5,14 @@ import { sendResponse } from "../../utils/sendResponse";
 import { PaymentService } from "./payment.service";
 
 const createPaymentIntent = catchAsync(async (req: any, res: Response) => {
+  if (!req.body) {
+    return sendResponse(res, {
+      success: false,
+      statusCode: httpStatus.BAD_REQUEST,
+      message: "Request body is required",
+    });
+  }
+
   const result = await PaymentService.createPaymentIntent(
     req.user.id,
     req.body

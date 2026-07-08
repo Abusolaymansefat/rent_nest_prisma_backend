@@ -20,13 +20,24 @@ app.use(cors({
       origin: config.app_url,
       credentials: true,
 }));
+app.use(cookieParser());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser());
+
+const endpointSecret = config.stripe_webhook_secret;
+
+app.use(
+  "/api/payments/webhook",
+  express.raw({ type: "application/json" })
+);
+
 
 app.get("/", (req: Request, res: Response) => {
-      res.send("Hello World!");
+      res.json({
+            success: true,
+            message: "RentNest API Running Successfully 🚀",
+      });
 });
 
 
@@ -45,8 +56,8 @@ app.use("/api/landlord", LandlordRoutes);
 // rental routes
 app.use("/api/rentals", RentalRoutes);
 app.use("/api/reviews", ReviewRoutes);
-app.use("/api/admin/users", AdminRoutes);
-app.use("/api//api/payments", PaymentRoutes)
+app.use("/api/admin", AdminRoutes);
+app.use("/api/payments", PaymentRoutes)
 
 app.use(notFoundMiddleware);
 app.use(globalErrorHandler);

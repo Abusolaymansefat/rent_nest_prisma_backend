@@ -9,6 +9,14 @@ const createRentalRequest = catchAsync(
       async (req: Request, res: Response) => {
             const tenantId = req.user!.id;
 
+            if (!req.body) {
+                  return sendResponse(res, {
+                        success: false,
+                        statusCode: httpStatus.BAD_REQUEST,
+                        message: "Request body is required",
+                  });
+            }
+
             const result = await RentalService.createRentalRequest(
                   tenantId,
                   req.body
