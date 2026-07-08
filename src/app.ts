@@ -28,6 +28,8 @@ app.get("/", (req: Request, res: Response) => {
       res.send("Hello World!");
 });
 
+
+// routes 
 app.use("/api/auth", AuthRoutes);
 app.use("/api/properties", PropertyRoutes);
 app.use("/api/categories", CategoryRoutes);
