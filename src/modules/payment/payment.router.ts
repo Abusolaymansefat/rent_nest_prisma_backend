@@ -17,6 +17,7 @@ router.post(
   PaymentController.confirmPayment
 );
 
+
 router.get(
   "/",
   auth(UserRole.TENANT),

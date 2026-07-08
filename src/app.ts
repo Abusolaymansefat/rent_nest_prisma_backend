@@ -11,6 +11,7 @@ import { AdminRoutes } from "./modules/admin/admin.roter";
 import { ReviewRoutes } from "./modules/review/review.routrt";
 import { notFoundMiddleware } from "./middleware/notFound";
 import { globalErrorHandler } from "./middleware/globalErrorHandler";
+import { PaymentRoutes } from "./modules/payment/payment.router";
 
 
 const app: Application = express();
@@ -45,6 +46,7 @@ app.use("/api/landlord", LandlordRoutes);
 app.use("/api/rentals", RentalRoutes);
 app.use("/api/reviews", ReviewRoutes);
 app.use("/api/admin/users", AdminRoutes);
+app.use("/api//api/payments", PaymentRoutes)
 
 app.use(notFoundMiddleware);
 app.use(globalErrorHandler);
