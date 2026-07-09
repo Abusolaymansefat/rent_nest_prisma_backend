@@ -13,6 +13,7 @@ interface AuthenticatedRequest extends Request {
       };
 }
 
+// create property
 const createProperty = catchAsync(async (req: Request, res: Response) => {
       const authReq = req as AuthenticatedRequest;
       const userId = authReq.user?.id;
