@@ -58,14 +58,14 @@ export const globalErrorHandler = (
       }
 
       // JWT Expired
-      else if (err instanceof jwt.TokenExpiredError) {
+      else if (err.name === "TokenExpiredError") {
             statusCode = httpStatus.UNAUTHORIZED;
             name = "TokenExpiredError";
             message = "Access token has expired.";
       }
 
       // Invalid JWT
-      else if (err instanceof jwt.JsonWebTokenError) {
+      else if (err.name === "JsonWebTokenError") {
             statusCode = httpStatus.UNAUTHORIZED;
             name = "JsonWebTokenError";
             message = "Invalid access token.";

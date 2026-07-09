@@ -30,7 +30,7 @@ const updateUserStatus = catchAsync(async (req: Request, res: Response) => {
 
 
       const result = await AdminService.updateUserStatus(
-            req.params.id,
+            id,
             req.body
       );
 

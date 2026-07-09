@@ -9,9 +9,10 @@ const createProperty = async (
             throw new Error("Category id is required");
       }
 
+      const { category, ...propertyData } = payload;
       return prisma.property.create({
             data: {
-                  ...payload,
+                  ...propertyData,
                   landlordId: userId,
                   categoryId: payload.categoryId,
             },
@@ -23,12 +24,13 @@ const updateProperty = async (
       userId: string,
       payload: Partial<ICreateProperty>
 ) => {
+      const { category, ...propertyData } = payload;
       return prisma.property.update({
             where: {
                   id,
                   landlordId: userId,
             },
-            data: payload,
+            data: propertyData,
       });
 };
 
