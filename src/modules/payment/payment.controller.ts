@@ -21,7 +21,7 @@ const createPaymentIntent = catchAsync(async (req: any, res: Response) => {
     success: true,
     statusCode: httpStatus.CREATED,
     message: "Payment session created successfully",
-    data: result, // { url, sessionId, payment }
+    data: result, 
   });
 });
 

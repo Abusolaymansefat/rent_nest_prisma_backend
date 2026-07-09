@@ -137,7 +137,8 @@ const confirmPayment = async (
       return result;
 };
 
-// Webhook থেকে কল হবে - transactionId (session.id) দিয়ে সরাসরি complete করে
+
+
 const markPaymentCompleted = async (sessionId: string) => {
       const payment = await prisma.payment.findUnique({
             where: { transactionId: sessionId },
