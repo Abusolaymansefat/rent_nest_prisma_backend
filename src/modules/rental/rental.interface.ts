@@ -11,6 +11,8 @@ export interface IUpdateRentalRequest {
       status: RentalStatus;
 }
 
+
+
 export interface IRentalQuery {
       page?: number;
       limit?: number;
@@ -32,3 +34,4 @@ export interface IRentalResponse {
       createdAt: Date;
       updatedAt: Date;
 }
+
