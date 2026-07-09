@@ -5,6 +5,7 @@ import config from "../../config";
 import { IConfirmPayment, ICreatePayment } from "./payment.interface";
 import httpStatus from "http-status";
 
+
 const createPaymentIntent = async (
       tenantId: string,
       payload: ICreatePayment
@@ -73,6 +74,76 @@ const createPaymentIntent = async (
             payment,
       };
 };
+
+
+// const createPaymentIntent = async (
+//       tenantId: string,
+//       payload: ICreatePayment
+// ) => {
+//       const rentalRequest = await prisma.rentalRequest.findUnique({
+//             where: { id: payload.rentalRequestId },
+//             include: { property: true, payment: true },
+//       });
+
+//       if (!rentalRequest) {
+//             throw { statusCode: httpStatus.NOT_FOUND, message: "Rental request not found" };
+//       }
+
+//       if (rentalRequest.tenantId !== tenantId) {
+//             throw { statusCode: httpStatus.FORBIDDEN, message: "You are not allowed to pay for this rental request" };
+//       }
+
+//       if (rentalRequest.status !== RentalStatus.APPROVED) {
+//             throw { statusCode: httpStatus.BAD_REQUEST, message: "Rental request is not approved yet" };
+//       }
+
+//       if (rentalRequest.payment) {
+//             throw { statusCode: httpStatus.BAD_REQUEST, message: "Payment already exists for this rental request" };
+//       }
+
+//       const amount = Math.round(rentalRequest.property.price * 100);
+
+//       const session = await stripe.checkout.sessions.create({
+//             mode: "payment",
+//             payment_method_types: ["card"],
+//             line_items: [
+//                   {
+//                         price_data: {
+//                               currency: "usd",
+//                               product_data: {
+//                                     name: rentalRequest.property.title ?? "Rental Payment",
+//                               },
+//                               unit_amount: amount,
+//                         },
+//                         quantity: 1,
+//                   },
+//             ],
+//             metadata: {
+//                   rentalRequestId: rentalRequest.id,
+//                   tenantId,
+//                   propertyId: rentalRequest.property.id,
+//             },
+//             success_url: `${config.app_url}/payment/success?session_id={CHECKOUT_SESSION_ID}`,
+//             cancel_url: `${config.app_url}/payment/cancel`,
+//       });
+
+//       const payment = await prisma.payment.create({
+//             data: {
+//                   transactionId: session.id,
+//                   rentalRequestId: rentalRequest.id,
+//                   tenantId,
+//                   amount: rentalRequest.property.price,
+//                   provider: PaymentProvider.STRIPE,
+//                   status: PaymentStatus.PENDING,
+//             },
+//       });
+
+//       return {
+//             url: session.url,
+//             sessionId: session.id,
+//             payment,
+//       };
+// };
 
 const confirmPayment = async (
       tenantId: string,

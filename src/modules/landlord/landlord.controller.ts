@@ -164,7 +164,7 @@ const updateRentalRequestStatus = catchAsync(
                   data: result,
             });
       }
-);
+);   
 
 export const LandlordController = {
       createProperty,

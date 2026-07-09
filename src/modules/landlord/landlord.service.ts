@@ -62,6 +62,18 @@ const updateRentalRequestStatus = async (
       id: string,
       payload: IUpdateRentalRequest
 ) => {
+      if (!payload || !payload.status) {
+            throw new Error("Status is required");
+      }
+
+      const rentalRequest = await prisma.rentalRequest.findUnique({
+            where: { id },
+      });
+
+      if (!rentalRequest) {
+            throw new Error("Rental request not found");
+      }
+
       return prisma.rentalRequest.update({
             where: {
                   id,
