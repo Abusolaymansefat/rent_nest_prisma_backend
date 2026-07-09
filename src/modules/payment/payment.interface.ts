@@ -3,7 +3,7 @@ export interface ICreatePayment {
 }
 
 export interface IConfirmPayment {
-  paymentIntentId: string;
+  sessionId: string;
 }
 
 export interface IPaymentResponse {

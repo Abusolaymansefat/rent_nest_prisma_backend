@@ -25,9 +25,11 @@ app.use(cookieParser());
 
 
 const endpointSecret = config.stripe_webhook_secret;
+
+
 app.use(
-  "/api/payments/webhook",
-  express.raw({ type: "application/json" })
+      "/api/payments/webhook",
+      express.raw({ type: "application/json" })
 );
 
 app.use(express.json());

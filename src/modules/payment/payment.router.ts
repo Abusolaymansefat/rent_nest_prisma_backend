@@ -17,6 +17,8 @@ router.post(
   PaymentController.confirmPayment
 );
 
+// Stripe webhook - auth middleware নেই, কারণ Stripe সরাসরি কল করে
+router.post("/webhook", PaymentController.handleWebhook);
 
 router.get(
   "/",
@@ -31,4 +33,3 @@ router.get(
 );
 
 export const PaymentRoutes = router;
- 
