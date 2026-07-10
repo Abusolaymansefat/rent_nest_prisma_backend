@@ -5,7 +5,6 @@ import { catchAsync } from "../../utils/catchAsync";
 import { sendResponse } from "../../utils/sendResponse";
 import { AdminService } from "./admin.service";
 
-// Get all users for admin
 const getAllUsers = catchAsync(async (req: Request, res: Response) => {
       const result = await AdminService.getAllUsers(req.query);
 
@@ -18,21 +17,18 @@ const getAllUsers = catchAsync(async (req: Request, res: Response) => {
       });
 });
 
-
-
-// update user status
 const updateUserStatus = catchAsync(async (req: Request, res: Response) => {
+      const id = Array.isArray(req.params.id) ? req.params.id[0] : req.params.id;
 
-      const id = req.params.id as string;
       if (!id) {
-            throw new Error("User ID is required");
+            return sendResponse(res, {
+                  success: false,
+                  statusCode: httpStatus.BAD_REQUEST,
+                  message: "User ID is required",
+            });
       }
 
-
-      const result = await AdminService.updateUserStatus(
-            id,
-            req.body
-      );
+      const result = await AdminService.updateUserStatus(id, req.body);
 
       sendResponse(res, {
             success: true,
@@ -72,9 +68,24 @@ const getAllRentals = catchAsync(async (req: Request, res: Response) => {
       });
 });
 
+/**
+ * GET /api/admin/dashboard
+ */
+const getDashboardStats = catchAsync(async (req: Request, res: Response) => {
+      const result = await AdminService.getDashboardStats();
+
+      sendResponse(res, {
+            success: true,
+            statusCode: httpStatus.OK,
+            message: "Dashboard stats retrieved successfully",
+            data: result,
+      });
+});
+
 export const AdminController = {
       getAllUsers,
       updateUserStatus,
       getAllProperties,
       getAllRentals,
+      getDashboardStats,
 };

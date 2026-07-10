@@ -5,7 +5,10 @@ import {
 } from "../../../generated/prisma/enums";
 
 export interface IUpdateUserStatus {
-  activeStatus: UserStatus;
+  status?: UserStatus;
+  name?: string;
+  phone?: string;
+  avatar?: string;
 }
 
 export interface IUserQuery {
@@ -13,9 +16,8 @@ export interface IUserQuery {
   limit?: number;
   searchTerm?: string;
   role?: string;
-  activeStatus?: UserStatus;
+  status?: UserStatus;
 }
-
 
 export interface IPropertyQuery {
   page?: number;
@@ -25,13 +27,11 @@ export interface IPropertyQuery {
   availability?: PropertyAvailability;
 }
 
-
 export interface IRentalQuery {
   page?: number;
   limit?: number;
   status?: RentalStatus;
 }
-
 
 export interface IAdminDashboard {
   totalUsers: number;
