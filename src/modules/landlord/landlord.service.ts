@@ -24,13 +24,22 @@ const updateProperty = async (
       userId: string,
       payload: Partial<ICreateProperty>
 ) => {
-      const { category, ...propertyData } = payload;
+      const { category, categoryId, ...propertyData } = payload;
+
+      const data: any = { ...propertyData };
+
+      if (categoryId) {
+            data.category = {
+                  connect: { id: categoryId },
+            };
+      }
+
       return prisma.property.update({
             where: {
                   id,
                   landlordId: userId,
             },
-            data: propertyData,
+            data,
       });
 };
 

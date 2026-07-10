@@ -38,3 +38,4 @@ router.patch(
 );
 
 export const LandlordRoutes = router;
+
