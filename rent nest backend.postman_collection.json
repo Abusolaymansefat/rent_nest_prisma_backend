@@ -47,7 +47,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"email\": \"tenant@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
+              "raw": "{\r\n  \"email\": \"landlord4@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -180,7 +180,7 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:5000/api/properties",
+              "raw": "http://localhost:5000/api/properties/503d28ac-c64d-42ef-b293-569d210fe049",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -188,7 +188,8 @@
               "port": "5000",
               "path": [
                 "api",
-                "properties"
+                "properties",
+                "503d28ac-c64d-42ef-b293-569d210fe049"
               ]
             }
           },
@@ -201,7 +202,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"name\": \"Apartment1\",\r\n  \"slug\": \"apartment1\",\r\n  \"icon\": \"🏢2\"\r\n}",
+              "raw": "{\r\n  \"name\": \"Apartment3\",\r\n  \"slug\": \"apartment3\",\r\n  \"icon\": \"🏢3\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -255,6 +256,14 @@
                 "properties"
               ]
             }
+          },
+          "response": []
+        },
+        {
+          "name": "patch",
+          "request": {
+            "method": "GET",
+            "header": []
           },
           "response": []
         }
@@ -314,6 +323,104 @@
             }
           },
           "response": []
+        },
+        {
+          "name": "post comfrom",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{auth_secret_0624}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "{{auth_secret_0624}}",
+                "type": "text"
+              },
+              {
+                "key": "Authorization",
+                "value": "",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"rentalRequestId\": \"8de7de58-db08-4e4b-95f7-962527b50cb9\"\r\n}"
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/payments/confirm",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "payments",
+                "confirm"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "payments webhook",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"rentalRequestId\": \"8de7de58-db08-4e4b-95f7-962527b50cb9\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/payments/webhook",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "payments",
+                "webhook"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get all payment",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/payments/8de7de58-db08-4e4b-95f7-962527b50cb9",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "payments",
+                "8de7de58-db08-4e4b-95f7-962527b50cb9"
+              ]
+            }
+          },
+          "response": []
         }
       ]
     },
@@ -327,7 +434,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"propertyId\": \"0ab7acee-b442-4dd0-a2e6-2c8caa23fdb0\",\r\n  \"moveInDate\": \"2026-08-01T00:00:00.000Z\",\r\n  \"duration\": 12,\r\n  \"message\": \"I want to rent this property.\"\r\n}",
+              "raw": "{\r\n  \"propertyId\": \"80671b07-5d9b-45b5-8331-3387daf88819\",\r\n  \"moveInDate\": \"2026-08-01T00:00:00.000Z\",\r\n  \"duration\": 325,\r\n  \"message\": \"I want to rent this property.this order now \"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -351,8 +458,11 @@
         },
         {
           "name": "get api",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
-            "method": "POST",
+            "method": "GET",
             "header": [],
             "body": {
               "mode": "raw",
@@ -385,7 +495,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"title\": \"Luxury Family Apartment\",\r\n  \"description\": \"A spacious and fully furnished apartment with modern facilities.\",\r\n  \"location\": \"Dhaka\",\r\n  \"address\": \"House 14, Road 7, Dhanmondi\",\r\n  \"price\": 25000,\r\n  \"bedrooms\": 3,\r\n  \"bathrooms\": 3,\r\n  \"size\": 1600,\r\n  \"propertyType\": \"APARTMENT\",\r\n  \"images\": [\r\n    \"https://images.unsplash.com/photo-1560185007-c5ca9d2c014d\",\r\n    \"https://images.unsplash.com/photo-1505693416388-ac5ce068fe85\"\r\n  ],\r\n  \"amenities\": [\r\n    \"WiFi\",\r\n    \"Parking\",\r\n    \"Lift\",\r\n    \"Security\",\r\n    \"Generator\",\r\n    \"Air Conditioning\"\r\n  ],\r\n  \"categoryId\": \"3821c0d2-7443-4194-80aa-053b53de2633\"\r\n}",
+              "raw": "{\r\n  \"title\": \"Luxury Family Apartment\",\r\n  \"description\": \"A spacious and fully furnished apartment with modern facilities.\",\r\n  \"location\": \"Dhaka\",\r\n  \"address\": \"House 14, Road 7, Dhanmondi\",\r\n  \"price\": 20000,\r\n  \"bedrooms\": 3,\r\n  \"bathrooms\": 3,\r\n  \"size\": 1400,\r\n  \"propertyType\": \"APARTMENT\",\r\n  \"images\": [\r\n    \"https://images.unsplash.com/photo-1560185007-c5ca9d2c014d\",\r\n    \"https://images.unsplash.com/photo-1505693416388-ac5ce068fe85\"\r\n  ],\r\n  \"amenities\": [\r\n    \"WiFi\",\r\n    \"Parking\",\r\n    \"Lift\",\r\n    \"Security\",\r\n    \"Generator\",\r\n    \"Air Conditioning\"\r\n  ],\r\n  \"categoryId\": \"3821c0d2-7443-4194-80aa-053b53de2633\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"

@@ -30,6 +30,7 @@ const createPaymentIntent = async (
       if (rentalRequest.payment) {
             throw { statusCode: httpStatus.BAD_REQUEST, message: "Payment already exists for this rental request" };
       }
+      
 
       const amount = Math.round(rentalRequest.property.price * 100);
 
