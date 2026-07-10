@@ -17,7 +17,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"name\": \"TENANT\",\r\n  \"email\": \"tenant@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"TENANT\"\r\n}",
+              "raw": "{\r\n  \"name\": \"abu\",\r\n  \"email\": \"abu@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"role\": \"TENANT\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -47,7 +47,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"email\": \"landlord4@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
+              "raw": "{\r\n  \"email\": \"sefat@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -180,7 +180,7 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:5000/api/properties/0ab7acee-b442-4dd0-a2e6-2c8caa23fdb0",
+              "raw": "http://localhost:5000/api/properties/f18cc269-d4b1-4ab7-a2c1-20346818280d",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -189,7 +189,7 @@
               "path": [
                 "api",
                 "properties",
-                "0ab7acee-b442-4dd0-a2e6-2c8caa23fdb0"
+                "f18cc269-d4b1-4ab7-a2c1-20346818280d"
               ]
             }
           },
@@ -202,7 +202,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"name\": \"Apartment4\",\r\n  \"slug\": \"apartment4\",\r\n  \"icon\": \"🏢4\"\r\n}",
+              "raw": "{\r\n  \"name\": \"Apartment10\",\r\n  \"slug\": \"apartment10\",\r\n  \"icon\": \"🏢10\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -263,7 +263,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n    \"title\": \"Luxury Family Apartment Dhanmondi \",\r\n    \"description\": \"A spacious and fully furnished apartment with modern facilities.\",\r\n    \"location\": \"Dhaka\",\r\n    \"address\": \"House 14, Road 7, Dhanmondi\",\r\n    \"price\": 50000,\r\n    \"bedrooms\": 3,\r\n    \"bathrooms\": 3,\r\n    \"size\": 1850,\r\n    \"propertyType\": \"APARTMENT\",\r\n    \"images\": [\r\n        \"https://images.unsplash.com/photo-1560185007-c5ca9d2c014d\"\r\n    ],\r\n    \"amenities\": [\r\n        \"WiFi\",\r\n        \"Parking\",\r\n        \"Lift\",\r\n        \"Security\",\r\n        \"Generator\",\r\n        \"Air Conditioning\"\r\n    ],\r\n    \"categoryId\": \"3821c0d2-7443-4194-80aa-053b53de2633\"\r\n}",
+              "raw": "{\r\n    \"title\": \"Luxury Family Apartment  \",\r\n    \"description\": \"A spacious and fully furnished apartment with modern facilities.\",\r\n    \"location\": \"Dhaka\",\r\n    \"address\": \"House 14, Road 7, Mogbazar\",\r\n    \"price\": 26000,\r\n    \"bedrooms\": 3,\r\n    \"bathrooms\": 3,\r\n    \"size\": 1850,\r\n    \"propertyType\": \"APARTMENT\",\r\n    \"images\": [\r\n        \"https://images.unsplash.com/photo-1560185007-c5ca9d2c014d\"\r\n    ],\r\n    \"amenities\": [\r\n        \"WiFi\",\r\n        \"Parking\",\r\n        \"Lift\",\r\n        \"Security\",\r\n        \"Generator\",\r\n        \"Air Conditioning\"\r\n    ],\r\n    \"categoryId\": \"f18cc269-d4b1-4ab7-a2c1-20346818280d\"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -287,7 +287,7 @@
           "response": []
         },
         {
-          "name": "patch",
+          "name": "put",
           "request": {
             "auth": {
               "type": "bearer",
@@ -324,7 +324,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:5000/api/landlord/properties/503d28ac-c64d-42ef-b293-569d210fe049",
+              "raw": "http://localhost:5000/api/landlord/properties/3821c0d2-7443-4194-80aa-053b53de2633",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -334,7 +334,7 @@
                 "api",
                 "landlord",
                 "properties",
-                "503d28ac-c64d-42ef-b293-569d210fe049"
+                "3821c0d2-7443-4194-80aa-053b53de2633"
               ]
             }
           },
@@ -353,7 +353,7 @@
               "raw": "{\r\n  \"name\": \"Apartment3\",\r\n  \"slug\": \"apartment3\",\r\n  \"icon\": \"🏢3\"\r\n}"
             },
             "url": {
-              "raw": "http://localhost:5000/api/landlord/requests",
+              "raw": "http://localhost:5000/api/landlord/requests/2d13a0c7-d503-4ecb-92b7-7579320b2754",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -362,7 +362,8 @@
               "path": [
                 "api",
                 "landlord",
-                "requests"
+                "requests",
+                "2d13a0c7-d503-4ecb-92b7-7579320b2754"
               ]
             }
           },
@@ -373,58 +374,6 @@
     {
       "name": "payment",
       "item": [
-        {
-          "name": "post create",
-          "request": {
-            "auth": {
-              "type": "bearer",
-              "bearer": [
-                {
-                  "key": "token",
-                  "value": "{{auth_secret_0624}}",
-                  "type": "string"
-                }
-              ]
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Authorization",
-                "value": "{{auth_secret_0624}}",
-                "type": "text"
-              },
-              {
-                "key": "Authorization",
-                "value": "",
-                "type": "text",
-                "disabled": true
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n   \"rentalRequestId\": \"63d8a232-d15c-49a0-9de3-293205ce54ee\"\r\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "http://localhost:5000/api/payments/create",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "5000",
-              "path": [
-                "api",
-                "payments",
-                "create"
-              ]
-            }
-          },
-          "response": []
-        },
         {
           "name": "post comfrom",
           "request": {
@@ -454,7 +403,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n   \"rentalRequestId\": \"8de7de58-db08-4e4b-95f7-962527b50cb9\"\r\n}"
+              "raw": "{\r\n   \"rentalRequestId\": \"6c8e0cac-f592-49b1-9d15-6ee2a7f1ac82\"\r\n}"
             },
             "url": {
               "raw": "http://localhost:5000/api/payments/confirm",
@@ -508,7 +457,7 @@
             "method": "GET",
             "header": [],
             "url": {
-              "raw": "http://localhost:5000/api/payments/8de7de58-db08-4e4b-95f7-962527b50cb9",
+              "raw": "http://localhost:5000/api/payments/6c8e0cac-f592-49b1-9d15-6ee2a7f1ac82",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -517,7 +466,37 @@
               "path": [
                 "api",
                 "payments",
-                "8de7de58-db08-4e4b-95f7-962527b50cb9"
+                "6c8e0cac-f592-49b1-9d15-6ee2a7f1ac82"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "post create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"rentalRequestId\": \"7016574e-9fd9-417d-9de9-9081accafefc\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/payments/create",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "payments",
+                "create"
               ]
             }
           },
@@ -535,7 +514,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"propertyId\": \"80671b07-5d9b-45b5-8331-3387daf88819\",\r\n  \"moveInDate\": \"2026-08-01T00:00:00.000Z\",\r\n  \"duration\": 325,\r\n  \"message\": \"I want to rent this property.this order now \"\r\n}",
+              "raw": "{\r\n  \"propertyId\": \"2d13a0c7-d503-4ecb-92b7-7579320b2754\",\r\n  \"moveInDate\": \"2026-08-01T00:00:00.000Z\",\r\n  \"duration\": 500,\r\n  \"message\": \"I want to rent this property.this order now \"\r\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -587,16 +566,19 @@
       ]
     },
     {
-      "name": "landlord",
+      "name": "admin",
       "item": [
         {
-          "name": "New Request",
+          "name": "admin",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
           "request": {
-            "method": "POST",
+            "method": "GET",
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"title\": \"Luxury Family Apartment\",\r\n  \"description\": \"A spacious and fully furnished apartment with modern facilities.\",\r\n  \"location\": \"Dhaka\",\r\n  \"address\": \"House 14, Road 7, Dhanmondi\",\r\n  \"price\": 20000,\r\n  \"bedrooms\": 3,\r\n  \"bathrooms\": 3,\r\n  \"size\": 1400,\r\n  \"propertyType\": \"APARTMENT\",\r\n  \"images\": [\r\n    \"https://images.unsplash.com/photo-1560185007-c5ca9d2c014d\",\r\n    \"https://images.unsplash.com/photo-1505693416388-ac5ce068fe85\"\r\n  ],\r\n  \"amenities\": [\r\n    \"WiFi\",\r\n    \"Parking\",\r\n    \"Lift\",\r\n    \"Security\",\r\n    \"Generator\",\r\n    \"Air Conditioning\"\r\n  ],\r\n  \"categoryId\": \"3821c0d2-7443-4194-80aa-053b53de2633\"\r\n}",
+              "raw": "",
               "options": {
                 "raw": {
                   "language": "json"
@@ -604,7 +586,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:5000/api/landlord/properties",
+              "raw": "http://localhost:5000/api/admin/users",
               "protocol": "http",
               "host": [
                 "localhost"
@@ -612,8 +594,102 @@
               "port": "5000",
               "path": [
                 "api",
-                "landlord",
+                "admin",
+                "users"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get properties",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/admin/properties",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "admin",
                 "properties"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get rentals",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/admin/rentals",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "admin",
+                "rentals"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "get dashboard",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/admin/dashboard",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "admin",
+                "dashboard"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "patch",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Abu Solayman sefat\",\r\n    \"phone\": \"01625192069\",\r\n    \"avatar\": \"avatar\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/admin/users/8adbefda-f720-4d16-8424-3286d67c542b",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "admin",
+                "users",
+                "8adbefda-f720-4d16-8424-3286d67c542b"
               ]
             }
           },
